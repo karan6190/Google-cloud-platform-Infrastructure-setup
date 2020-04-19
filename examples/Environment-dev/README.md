@@ -1,7 +1,7 @@
 # Terraform-gcp-environment-setup
 
 ## Network
-By default this modules creates the **Networl** with **one public subnetwork** and **one private subnetwork** with **NAT gateway on Private subnetwork**.
+By default this modules creates the **Network** with **one public subnetwork** and **one private subnetwork** with **NAT gateway on Private subnetwork**.
 **Default Internet Gateway** is associated with public Subnets.
 
 ## Sample code for using network module
