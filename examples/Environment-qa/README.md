@@ -1,14 +1,4 @@
 # Terraform-gcp-environment-setup
-Terraform module which creates Environment components like network, subnetwork, route etc.
-
-These types of resources are supported:
-
-* [Network](https://www.terraform.io/docs/providers/google/r/compute_network.html)
-* [Subnetwork](https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html)
-* [Route](https://www.terraform.io/docs/providers/google/r/compute_route.html)
-* [Router_NAT](https://www.terraform.io/docs/providers/google/r/compute_router_nat.html)
-* [Firewall](https://www.terraform.io/docs/providers/google/r/compute_firewall.html)
-* [Bastion Host](https://www.terraform.io/docs/providers/google/r/compute_instance.html)
 
 ## Network
 By default this modules creates the **Networl** with **one public subnetwork** and **one private subnetwork** with **NAT gateway on Private subnetwork**.
@@ -19,7 +9,7 @@ By default this modules creates the **Networl** with **one public subnetwork** a
 ```hcl
 
 module "vpc" {
-  source = "./modules/env" 
+  source = "../../modules/env" 
   ENV                   = "${var.ENV}"              #Environment Type like qa, dev | default is qa
   VPC_NAME              = "${var.VPC_NAME}"         #Network Name  | default is "custom-vpc"
   REGION                = "${var.REGION}"           #GCP Region | default is us-east1
@@ -27,11 +17,6 @@ module "vpc" {
   PRI1_CIDR_BLOCK       = "${var.PRI1_CIDR_BLOCK}"  #CIDR Block Range | default is 10.53.16.0/24
 }
 ```
-
-## Examples
-
-* [DEV Environment](https://github.com/karan6190/terraform-gcp-environment-setup/tree/master/examples/Environment-dev)
-* [QA Environment](https://github.com/karan6190/terraform-gcp-environment-setup/tree/master/examples/Environment-qa)
 
 ## Inputs
 
