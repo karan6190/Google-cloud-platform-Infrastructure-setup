@@ -1,4 +1,7 @@
 # Terraform-gcp-environment-setup
+
+![Terraform_CI](https://github.com/karan6190/terraform-gcp-environment-setup/workflows/Terraform_CI/badge.svg?branch=master)
+
 Terraform module which creates Environment components like network, subnetwork, route etc.
 
 These types of resources are supported:
