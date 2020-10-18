@@ -53,4 +53,4 @@ module "vpc" {
 
 ## Authors
 
-Module is maintained by [Karan Sharma](https://github.com/karan6190).
+Module is maintained by [Karan Sharma](https://github.com/karan6190)
